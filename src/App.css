@@ -1,0 +1,16 @@
+.weather-background {
+  position: relative;
+  background-color: #000000a8;
+  background-position: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 1000px;
+  height: 100%;
+  display: block;
+  margin: 100px auto;
+  border-radius: 10px;
+  opacity: 1;
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+  margin-bottom: 0;
+  color: white;
+}
