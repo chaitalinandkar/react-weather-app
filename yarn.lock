@@ -4468,6 +4468,11 @@ get-caller-file@^2.0.5:
   resolved "https://registry.yarnpkg.com/get-caller-file/-/get-caller-file-2.0.5.tgz#4f94412a82db32f36e3b0b9741f8a97feb031f7e"
   integrity sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==
 
+get-date@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/get-date/-/get-date-1.0.2.tgz#65076db78c019726e3d03fa774bc2c36ec4119e5"
+  integrity sha512-tPtGEe23k7WdEXBad1Qxoto3t09Tirkfr+sgxYdNWUTl+4g8e9CXI7Pmu7exFLKWe2D09bqOLto5QyYy2UMGGA==
+
 get-intrinsic@^1.0.2, get-intrinsic@^1.1.0, get-intrinsic@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/get-intrinsic/-/get-intrinsic-1.1.2.tgz#336975123e05ad0b7ba41f152ee4aadbea6cf598"

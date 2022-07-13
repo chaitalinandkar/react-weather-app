@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BallTriangle } from 'react-loader-spinner';
 import axios from "axios";
 import "./TopSection.css";
 import "./MiddleSection.css";
@@ -38,13 +37,6 @@ export default function TopSection() {
   //Current YEAR
   let year = now.getFullYear();
 
-  //Display DATE format
-  let displayMonth = document.querySelector("#current-month");
-  displayMonth.innerHTML = `${month}`;
-  let displayDate = document.querySelector("#current-date");
-  displayDate.innerHTML = `${date},`;
-  let displayYear = document.querySelector("#current-year");
-  displayYear.innerHTML = `${year}`;
 
   //Getting current DAY
   let days = [
@@ -89,6 +81,18 @@ export default function TopSection() {
   function updateCity(event) {
     setCity(event.target.value);
   }
+  function showCurrentPosition(position) {
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+  let apiKey = "f7dffd4359849bb28c77fa4fe304c30f";
+  let unit = "metric";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${unit}`;
+  axios.get(apiUrl).then(showWeather);
+}
+
+  function currentCity() {
+    navigator.geolocation.getCurrentPosition(showCurrentPosition);
+  }
   let form = (<form>
       <div className="heading">
         <input
@@ -101,7 +105,7 @@ export default function TopSection() {
         <button className="search-button" id="search" onSubmit={handleSubmit}>
           Search
         </button>
-        <button className="current-location">
+        <button className="current-location" onSubmit={currentCity}>
           <i className="fa-solid fa-location-dot"></i>
         </button>
       </div>
@@ -192,13 +196,6 @@ export default function TopSection() {
     </div>
     );
   } else {
-    return (
-    <BallTriangle
-      height="100"
-      width="100"
-      color='black'
-      ariaLabel='loading'
-    />
-    );
+    return form;
   }
   }
