@@ -179,7 +179,7 @@ export default function TopSection() {
       <div className="footer">
         <p>
           <a
-            href="https://github.com/chaitalinandkar"
+            href="https://github.com/chaitalinandkar/react-weather-app"
             className="open-source-code"
             target="_blank"
             rel="noreferrer"
