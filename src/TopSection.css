@@ -3,7 +3,6 @@ div.heading {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  top: 20px;
 }
 
 .search-bar {
@@ -12,7 +11,7 @@ div.heading {
   padding: 10px;
   padding-left: 20px;
   font-size: 20px;
-  margin: 30px 20px 0 0;
+  margin: 20px 20px 0 0;
   border-radius: 10px;
   text-align: left;
   border: none;
