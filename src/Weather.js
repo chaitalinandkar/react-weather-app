@@ -108,6 +108,7 @@ export default function TopSection() {
               placeholder="Enter a city..."
               className="search-bar"
               id="search-city"
+              autoComplete="off"
               onChange={updateCity}
             />
             <button
@@ -215,6 +216,7 @@ export default function TopSection() {
                 placeholder="Enter a city..."
                 className="search-bar"
                 id="search-city"
+                autoComplete="off"
                 onChange={updateCity}
               />
               <button
