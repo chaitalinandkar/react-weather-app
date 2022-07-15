@@ -101,7 +101,7 @@ export default function TopSection() {
   if (loaded) {
     return (
       <div>
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="heading">
             <input
               type="text"
@@ -115,7 +115,6 @@ export default function TopSection() {
               className="search-button"
               id="search"
               type="submit"
-              onSubmit={handleSubmit}
             >
               Search
             </button>
@@ -166,14 +165,14 @@ export default function TopSection() {
                       className="current-temperature"
                       id="display-temperature"
                     >
-                      25
+                      {Math.round(weather.temperature)}
                     </span>
                   </strong>
                 </div>
               </div>
               <div className="temp">
                 <div className="temp-unit">
-                  {Math.round(weather.temperature)}&#xb0;
+                  &#xb0;
                   <a href="/" className="active" id="celsius-link">
                     C
                   </a>
@@ -208,8 +207,7 @@ export default function TopSection() {
       </div>
     );
   } else {
-    search();
-      return (<form>
+      return (<form onSubmit={handleSubmit}>
             <div className="heading">
               <input
                 type="text"
@@ -223,7 +221,7 @@ export default function TopSection() {
                 className="search-button"
                 id="search"
                 type="submit"
-                onSubmit={handleSubmit}
+                
               >
                 Search
               </button>
